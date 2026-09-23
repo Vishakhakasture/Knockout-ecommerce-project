@@ -99,32 +99,27 @@
         <div class="container">
           <div class="section-title">
             <h2>Featured Products</h2>
-
             <p>Check out some of our popular products.</p>
           </div>
 
-          <!-- Product Grid -->
-
           <div class="product-grid" data-bind="foreach: home.featuredProducts">
             <div class="product-card">
-              <!-- Product Image -->
-
               <div class="product-image">
                 <img
                   data-bind="
-                                attr: {
-                                    src: image,
-                                    alt: name
-                                }
-                            "
+              attr: {
+                src: image,
+                alt: name
+              }
+            "
                 />
               </div>
 
-              <!-- Product Information -->
-
               <div class="product-info">
-                <span class="product-category" data-bind="text: category">
-                </span>
+                <span
+                  class="product-category"
+                  data-bind="text: category"
+                ></span>
 
                 <h3 data-bind="text: name"></h3>
 
@@ -139,23 +134,32 @@
                     <span data-bind="text: price"></span>
                   </span>
 
-                  <button
-                    class="btn"
-                    data-bind="
-                                    click: $parent.addToCart
-                                "
-                  >
-                    Add to Cart
-                  </button>
+                  <div class="product-actions">
+                    <button
+                      class="btn secondary"
+                      data-bind="
+                  click: $parent.viewProduct
+                "
+                    >
+                      View
+                    </button>
+
+                    <button
+                      class="btn"
+                      data-bind="
+                  click: $parent.addToCart
+                "
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="view-all">
-            <a href="products.html" class="btn secondary">
-              View All Products
-            </a>
+            <a href="products.html" class="btn secondary"> View All </a>
           </div>
         </div>
       </section>

@@ -9,8 +9,11 @@ function HeaderViewModel() {
     const loggedInUser = localStorage.getItem("loggedInUser");
 
     if (loggedInUser) {
+      const user = JSON.parse(loggedInUser);
+
       self.isLoggedIn(true);
-      self.username(loggedInUser);
+
+      self.username(user.email);
     } else {
       self.isLoggedIn(false);
       self.username("");

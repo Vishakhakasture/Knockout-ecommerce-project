@@ -1,7 +1,7 @@
-function HomeViewModel() {
+function ProductsViewModel() {
   const self = this;
 
-  self.featuredProducts = ko.observableArray(products.slice(0, 6));
+  self.products = ko.observableArray(products);
 
   self.addToCart = function (product) {
     Cart.addToCart(product);
@@ -11,3 +11,7 @@ function HomeViewModel() {
     window.location.href = "products.html?id=" + product.id;
   };
 }
+
+ko.applyBindings(new ProductsViewModel());
+
+Cart.updateBadge();

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login - MyShop</title>
+
+    <!-- Main shop CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Login-specific CSS -->
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- ================= LOGIN PAGE ================= -->
+
+      <main class="login-page">
+        <!-- ================= LOGIN CARD ================= -->
+
+        <div class="login-card">
+          <!-- ================= LOGIN HEADER ================= -->
+
+          <div class="login-header">
+            <div class="login-logo">🛍️</div>
+
+            <h1>Welcome Back</h1>
+
+            <p>Login to your MyShop account</p>
+          </div>
+
+          <!-- ================= LOGIN FORM ================= -->
+
+          <form data-bind="submit: login">
+            <!-- Email / Mobile -->
+
+            <div class="form-group">
+              <label for="loginValue"> Email or Mobile </label>
+
+              <input
+                id="loginValue"
+                type="text"
+                data-bind="value: loginValue"
+                placeholder="Enter email or mobile"
+                autocomplete="username"
+              />
+            </div>
+
+            <!-- Password -->
+
+            <div class="form-group">
+              <label for="password"> Password </label>
+
+              <input
+                id="password"
+                type="password"
+                data-bind="value: password"
+                placeholder="Enter password"
+                autocomplete="current-password"
+              />
+            </div>
+
+            <!-- Error -->
+
+            <p
+              class="login-error"
+              data-bind="
+                visible: error,
+                text: error
+              "
+            ></p>
+
+            <!-- Login Button -->
+
+            <button type="submit" class="login-button">Login</button>
+          </form>
+
+          <!-- ================= LOGIN FOOTER ================= -->
+
+          <div class="login-footer">
+            <p>
+              Don't have an account?
+              <a href="register.html"> Create an account </a>
+            </p>
+
+            <a href="index.html" class="back-home"> ← Back to MyShop </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+
+    <script src="js/data/users.js"></script>
+
+    <script src="js/viewmodels/loginViewModel.js"></script>
+  </body>
+</html>
