@@ -13,7 +13,7 @@ function HeaderViewModel() {
 
       self.isLoggedIn(true);
 
-      self.username(user.email);
+      self.username(user.email.split("@")[0]);
     } else {
       self.isLoggedIn(false);
       self.username("");
