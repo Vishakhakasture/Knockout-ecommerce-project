@@ -7,23 +7,15 @@
 
     <title>Login - MyShop</title>
 
-    <!-- Main shop CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Login-specific CSS -->
     <link rel="stylesheet" href="css/login.css" />
   </head>
 
   <body>
     <div id="app">
-      <!-- ================= LOGIN PAGE ================= -->
-
       <main class="login-page">
-        <!-- ================= LOGIN CARD ================= -->
-
         <div class="login-card">
-          <!-- ================= LOGIN HEADER ================= -->
-
           <div class="login-header">
             <div class="login-logo">🛍️</div>
 
@@ -32,11 +24,7 @@
             <p>Login to your MyShop account</p>
           </div>
 
-          <!-- ================= LOGIN FORM ================= -->
-
           <form data-bind="submit: login">
-            <!-- Email / Mobile -->
-
             <div class="form-group">
               <label for="loginValue"> Email or Mobile </label>
 
@@ -48,8 +36,6 @@
                 autocomplete="username"
               />
             </div>
-
-            <!-- Password -->
 
             <div class="form-group">
               <label for="password"> Password </label>
@@ -63,8 +49,6 @@
               />
             </div>
 
-            <!-- Error -->
-
             <p
               class="login-error"
               data-bind="
@@ -73,12 +57,8 @@
               "
             ></p>
 
-            <!-- Login Button -->
-
             <button type="submit" class="login-button">Login</button>
           </form>
-
-          <!-- ================= LOGIN FOOTER ================= -->
 
           <div class="login-footer">
             <p>

@@ -12,15 +12,11 @@
 
   <body>
     <div id="app">
-      <header class="header">
+      <!-- <header class="header">
         <div class="container header-content">
-          <!-- Logo -->
-
           <div class="logo">
             <a href="index.html"> MyShop </a>
           </div>
-
-          <!-- Navigation -->
 
           <nav class="navigation">
             <a href="index.html"> Home </a>
@@ -32,11 +28,7 @@
             <a href="#"> Contact </a>
           </nav>
 
-          <!-- Header Icons -->
-
           <div class="header-icons">
-            <!-- CART -->
-
             <a href="cart.html" class="icon-button cart-icon" title="Cart">
               🛒
 
@@ -45,13 +37,10 @@
               </span>
             </a>
 
-            <!-- USER -->
-            <!-- USER -->
             <div class="user-dropdown">
               <button class="icon-button user-icon" title="Account">👤</button>
 
               <div class="dropdown-menu">
-                <!-- Welcome / Username -->
                 <div
                   class="dropdown-user"
                   data-bind="
@@ -61,13 +50,10 @@
       "
                 ></div>
 
-                <!-- Profile -->
                 <a href="profile.html"> 👤 Profile </a>
 
-                <!-- Cart -->
                 <a href="cart.html"> 🛒 Cart </a>
 
-                <!-- Login / Logout -->
                 <a
                   href="#"
                   data-bind="
@@ -79,7 +65,8 @@
             </div>
           </div>
         </div>
-      </header>
+      </header> -->
+      <header-component></header-component>
 
       <section class="hero">
         <div class="container hero-content">
@@ -92,8 +79,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ================= FEATURED PRODUCTS ================= -->
 
       <section class="featured-products">
         <div class="container">
@@ -164,46 +149,18 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="container footer-content">
-          <div class="footer-column">
-            <h3>MyShop</h3>
-
-            <p>Your one-stop online shop.</p>
-          </div>
-
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-
-            <a href="index.html"> Home </a>
-
-            <a href="products.html"> Products </a>
-
-            <a href="cart.html"> Cart </a>
-          </div>
-
-          <div class="footer-column">
-            <h3>Customer Service</h3>
-
-            <a href="#"> Contact Us </a>
-
-            <a href="#"> Privacy Policy </a>
-
-            <a href="#"> Terms & Conditions </a>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>© 2026 MyShop. All rights reserved.</p>
-        </div>
-      </footer>
+      <footer-component></footer-component>
     </div>
 
     <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
 
-    <script src="js/data/product-data.js"></script>
+    <script src="js/components/header/headerViewModel.js"></script>
 
-    <script src="js/viewmodels/headerViewModel.js"></script>
+    <script src="js/components/componentLoader.js"></script>
+
+    <script src="js/components/components.js"></script>
+
+    <script src="js/data/product-data.js"></script>
 
     <script src="js/viewmodels/homeViewModel.js"></script>
 

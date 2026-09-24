@@ -205,8 +205,6 @@ a {
   display: block;
 }
 
-/* ================= DROPDOWN ITEMS ================= */
-
 .dropdown-menu a {
   display: block;
 
@@ -233,11 +231,7 @@ a {
   color: #111827;
 }
 
-/* ================= GREETING ================= */
-
 .dropdown-user {
-  display: block;
-
   width: 100%;
 
   padding: 12px 16px;

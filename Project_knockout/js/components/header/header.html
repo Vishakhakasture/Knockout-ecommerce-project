@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="container header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html"> MyShop </a>
+    </div>
+
+    <nav class="navigation">
+      <a href="index.html"> Home </a>
+
+      <a href="products.html"> Products </a>
+
+      <a href="#"> About </a>
+
+      <a href="#"> Contact </a>
+    </nav>
+
+    <div class="header-icons">
+      <!-- Cart -->
+      <a href="cart.html" class="icon-button cart-icon" title="Cart">
+        🛒
+
+        <span class="cart-badge" data-bind="text: cartCount"> 0 </span>
+      </a>
+
+      <div class="user-dropdown">
+        <button class="icon-button user-icon" title="Account">👤</button>
+
+        <div class="dropdown-menu">
+          <div
+            class="dropdown-user"
+            data-bind="
+              text: isLoggedIn()
+                ? '👋🏻 Hello, ' + username() + '!'
+                : '🌐 Welcome!'
+            "
+          ></div>
+
+          <a href="profile.html"> 👤 Profile </a>
+
+          <a href="cart.html"> 🛒 Cart </a>
+
+          <a
+            href="#"
+            data-bind="
+              text: isLoggedIn()
+                ? '🏷️ Logout'
+                : '🏷️ Login',
+              click: authAction
+            "
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

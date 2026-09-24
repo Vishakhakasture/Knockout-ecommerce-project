@@ -14,8 +14,7 @@
 
   <body>
     <div id="app">
-      <!-- Your existing header -->
-
+      <header-component></header-component>
       <main class="products-page">
         <section class="products-section">
           <div class="container">
@@ -76,14 +75,21 @@
           </div>
         </section>
       </main>
+      <footer-component></footer-component>
     </div>
 
     <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
 
-    <script src="js/data/product_data.js"></script>
+    <script src="js/components/header/headerViewModel.js"></script>
 
-    <script src="js/cart.js"></script>
+    <script src="js/components/componentLoader.js"></script>
 
-    <script src="js/viewmodels/productsViewModel.js"></script>
+    <script src="js/components/components.js"></script>
+
+    <script src="js/data/product-data.js"></script>
+
+    <script src="js/viewmodels/homeViewModel.js"></script>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

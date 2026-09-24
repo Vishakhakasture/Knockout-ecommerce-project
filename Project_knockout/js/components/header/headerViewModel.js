@@ -32,4 +32,7 @@ function HeaderViewModel() {
   };
 
   self.checkAuthentication();
+
+  // Get the current cart count
+  self.cartCount(Cart.getCount());
 }
